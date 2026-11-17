@@ -32,16 +32,46 @@ Dự án thu thập và đối chiếu hai tập dữ liệu độc lập nhằm
 
 ---
 
-## 3. Hướng dẫn cài đặt & Thực thi nhanh
+## 3. Hướng dẫn cài đặt & Thực thi nhanh với `uv`
 
-### Bước 1: Khởi tạo môi trường ảo Python 3.12
+Dự án được quản lý toàn diện bằng **[uv](https://docs.astral.sh/uv/)** (package & environment manager hiệu năng cao). Bạn không cần cài trước Python hay tạo môi trường ảo thủ công.
+
+### Bước 1: Cài đặt `uv` (nếu máy chưa có)
+
+- **Windows (PowerShell):**
+  ```powershell
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+- **macOS / Linux:**
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
+
+---
+
+### Bước 2: Đồng bộ môi trường và cài đặt thư viện
+
+Mở terminal tại thư mục gốc của dự án và chạy:
 
 ```bash
-py -3.12 -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
+uv sync
 ```
 
-### Bước 2: Chạy mã nguồn
+---
 
-Mở tệp `healthcare_cvd_risk_pipeline.ipynb` bằng VS Code hoặc Jupyter Lab/Notebook với Kernel `.venv` và chọn **Run All Cells**.
+### Bước 3: Chạy mã nguồn
+
+Bạn có thể chạy dự án bằng một trong hai cách:
+
+1. **Khởi động Jupyter trực tiếp qua `uv`:**
+
+   ```bash
+   uv run jupyter lab
+   # hoặc
+   uv run jupyter notebook
+   ```
+
+2. **Chạy qua VS Code:**
+   - Mở file [`healthcare_cvd_risk_pipeline.ipynb`](healthcare_cvd_risk_pipeline.ipynb).
+   - Nhìn góc trên cùng bên phải màn hình notebook, bấm **Select Kernel** -> chọn **Python Environments...** -> trỏ vào **`.venv`** (Python 3.11).
+   - Bấm **Run All** để thực thi toàn bộ pipeline.
