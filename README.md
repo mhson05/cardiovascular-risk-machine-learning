@@ -71,5 +71,5 @@ Bạn có thể chạy dự án bằng một trong hai cách:
 
 2. **Chạy qua VS Code:**
    - Mở file [`healthcare_cvd_risk_pipeline.ipynb`](healthcare_cvd_risk_pipeline.ipynb).
-   - Nhìn góc trên cùng bên phải màn hình notebook, bấm **Select Kernel** -> chọn **Python Environments...** -> trỏ vào **`.venv`** (Python 3.11).
+   - Nhìn góc trên cùng bên phải màn hình notebook, bấm **Select Kernel** -> chọn **Python Environments...** -> trỏ vào **`.venv`**.
    - Bấm **Run All** để thực thi toàn bộ pipeline.
