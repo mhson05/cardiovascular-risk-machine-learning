@@ -34,8 +34,6 @@ Dự án thu thập và đối chiếu hai tập dữ liệu độc lập nhằm
 
 ## 3. Hướng dẫn cài đặt & Thực thi nhanh với `uv`
 
-Dự án được quản lý toàn diện bằng **[uv](https://docs.astral.sh/uv/)** (package & environment manager hiệu năng cao). Bạn không cần cài trước Python hay tạo môi trường ảo thủ công.
-
 ### Bước 1: Cài đặt `uv` (nếu máy chưa có)
 
 - **Windows (PowerShell):**
